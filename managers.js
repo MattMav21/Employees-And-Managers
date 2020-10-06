@@ -34,12 +34,8 @@ const Susie = new Manager("Susie", "TA Manager", 100000, "Calvin", [Lily, Cliffo
 const Calvin = new Manager("Calvin", "Director", 130000, "Hobbes", [Susie])
 const Hobbes = new Manager("Hobbes", "Founder", 1000000, null, [Calvin])
 
-console.log( Hobbes.bonus(0.05) );
-console.log( Calvin.bonus(0.05) );
-console.log( Susie.bonus(0.05) );
-console.log("------")
-console.log(Hobbes.totalSubsalary());
-console.log(Calvin.totalSubsalary());
-console.log(Susie.totalSubsalary());
-console.log(Lily.bonus(0.05)); //Good
-console.log(Clifford.bonus(0.05)); //Good
+console.log(Hobbes.bonus(0.05));
+console.log(Calvin.bonus(0.05));
+console.log(Susie.bonus(0.05));
+console.log(Lily.bonus(0.05));
+console.log(Clifford.bonus(0.05));
