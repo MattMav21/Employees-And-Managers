@@ -8,17 +8,10 @@ class Manager extends Employee {
     }
 
     bonus(multiplier) {
-        
+        return (this.totalSubsalary() + this.salary) * multiplier;
     }
 
     totalSubsalary() {
-        // let total = this.employees.reduce((sum, employee) => {
-        //     console.log(employee);
-        //     // sum += employee.salary;
-        //     // return sum;
-        // })
-        // return total;
-
         let total = 0;
         for (let i = 0; i < this.employees.length; i++) {
             let employee = this.employees[i];
@@ -41,4 +34,12 @@ const Susie = new Manager("Susie", "TA Manager", 100000, "Calvin", [Lily, Cliffo
 const Calvin = new Manager("Calvin", "Director", 130000, "Hobbes", [Susie])
 const Hobbes = new Manager("Hobbes", "Founder", 1000000, null, [Calvin])
 
-console.log( Hobbes.totalSubsalary() );// What we want: 280000
+console.log( Hobbes.bonus(0.05) );
+console.log( Calvin.bonus(0.05) );
+console.log( Susie.bonus(0.05) );
+console.log("------")
+console.log(Hobbes.totalSubsalary());
+console.log(Calvin.totalSubsalary());
+console.log(Susie.totalSubsalary());
+console.log(Lily.bonus(0.05)); //Good
+console.log(Clifford.bonus(0.05)); //Good
